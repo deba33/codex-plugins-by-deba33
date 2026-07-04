@@ -33,6 +33,8 @@ Now on Market place screen/page switch to personal. You can see a new section **
 
 ![](/doc_images/affinity-mcp/05.png)
 
+>For Codex CLI Users `codex plugin marketplace add deba33/codex-plugins-by-deba33`
+
 ## Remove this repo from Codex GUI Plugins Marketplace
 
 - Close Codex App. Also remove from background if running.

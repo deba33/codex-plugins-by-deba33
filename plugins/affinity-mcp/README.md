@@ -80,6 +80,8 @@ Or click on the icon to go to details page and install it there.
 
 ![](/doc_images/affinity-mcp/06.2.png)
 
+>For Codex CLI Users `codex plugin marketplace add deba33/codex-plugins-by-deba33`
+
 ## Affinity Setup
 
 1. Open Affinity.
