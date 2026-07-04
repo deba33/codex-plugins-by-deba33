@@ -42,13 +42,13 @@ If Affinity uses a different local port in the future, update `AFFINITY_MCP_BASE
 #### for stable branch
 
 ```powershell
-codex plugin marketplace add your-github-username/affinity-codex-plugins --ref stable
+codex plugin marketplace add deba33/codex-plugins-by-deba33 --ref stable
 ```
 
 #### for testing branch
 
 ```powershell
-codex plugin marketplace add your-github-username/affinity-codex-plugins --ref main
+codex plugin marketplace add deba33/codex-plugins-by-deba33 --ref main
 ```
 
 Then open Codex, find `Affinity MCP` in the plugin directory, install it, and start a new chat.
