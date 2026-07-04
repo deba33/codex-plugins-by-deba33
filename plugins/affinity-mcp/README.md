@@ -35,9 +35,7 @@ http://localhost:6767
 
 If Affinity uses a different local port in the future, update `AFFINITY_MCP_BASE_URL` in `plugins/affinity-mcp/.mcp.json`.
 
-## How to Install
-
-### Using powershell
+## Install on Codex GUI
 
 #### for stable branch
 
@@ -53,7 +51,25 @@ codex plugin marketplace add deba33/codex-plugins-by-deba33 --ref main
 
 Then open Codex, find `Affinity MCP` in the plugin directory, install it, and start a new chat.
 
-### Using Codex GUI
+### Step 1
+
+Open plugins
+
+![](/doc_images/affinity-mcp/01.png)
+
+### Step 2
+
+On far right top you can see a `+` button with dropdown icon. click the **dropdown icon**.
+
+![](/doc_images/affinity-mcp/02.png)
+
+### Step 3
+
+On dropdown menu click the **"Add Marketplace"**
+
+![](/doc_images/affinity-mcp/03.png)
+
+### Step 4
 
 
 
