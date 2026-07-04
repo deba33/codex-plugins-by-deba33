@@ -37,52 +37,61 @@ If Affinity uses a different local port in the future, update `AFFINITY_MCP_BASE
 
 ## Install on Codex GUI
 
-#### for stable branch
+### Step 1: Add the repo as Market Place
 
-```powershell
-codex plugin marketplace add deba33/codex-plugins-by-deba33 --ref stable
-```
-
-#### for testing branch
-
-```powershell
-codex plugin marketplace add deba33/codex-plugins-by-deba33 --ref main
-```
-
-Then open Codex, find `Affinity MCP` in the plugin directory, install it, and start a new chat.
-
-### Step 1
+#### 1. 
 
 Open plugins
 
 ![](/doc_images/affinity-mcp/01.png)
 
-### Step 2
+#### 2. 
 
 On far right top you can see a `+` button with dropdown icon. click the **dropdown icon**.
 
 ![](/doc_images/affinity-mcp/02.png)
 
-### Step 3
+#### 3. 
 
 On dropdown menu click the **"Add Marketplace"**
 
 ![](/doc_images/affinity-mcp/03.png)
 
-### Step 4
+#### 4.
 
+- On Source Add `deba33/codex-plugins-by-deba33`
+- Leave others blank and click **"Add Marketplace"**
 
+![](/doc_images/affinity-mcp/04.png)
+
+#### 5.
+
+Now on Market place screen/page switch to personal. You can see a new section **"Codex Plugins by deba33"**
+
+![](/doc_images/affinity-mcp/05.png)
+
+### Step 2
+
+Install the Affinity MCP Plugin by clicking on install here.
+
+![](/doc_images/affinity-mcp/06.1.png)
+
+Or click on the icon to go to details page and install it there.
+
+![](/doc_images/affinity-mcp/06.2.png)
 
 ## Affinity Setup
 
 1. Open Affinity.
 2. Open settings.
+![](/doc_images/affinity-mcp/07.png)
 3. Go to `Model Context Protocol`.
 4. Enable `Affinity MCP`.
 5. Enable only the permissions you are comfortable granting.
+![](/doc_images/affinity-mcp/08.png)
 6. Keep Affinity open while using the plugin.
 
-Useful Affinity permission toggles include:
+### Useful Affinity permission toggles include:
 
 - Desktop file access, if scripts need to read or save files.
 - Network access, if scripts need local or internet requests.
@@ -125,6 +134,12 @@ plugins/affinity-mcp/scripts/affinity-mcp-proxy.mjs
 ```
 
 Codex talks to that proxy over stdio. The proxy connects to Affinity's local MCP server at `localhost:6767`, initializes the Affinity MCP session, reads the SDK preamble, and forwards tool calls.
+
+## Removing the plugin
+
+- On Market place screen/page switch to personal. 
+- Under the **"Codex Plugins by deba33"** section find the plugin.
+- Click the 3 dots menu on right side of plugin card and click "uninstall" and cofirm.
 
 ## License
 
