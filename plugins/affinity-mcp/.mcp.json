@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "affinity-by-canva": {
+      "command": "node",
+      "args": [
+        "./scripts/affinity-mcp-proxy.mjs"
+      ],
+      "env": {
+        "AFFINITY_MCP_BASE_URL": "http://localhost:6767",
+        "AFFINITY_MCP_PROTOCOL_VERSION": "2025-11-25"
+      }
+    }
+  }
+}

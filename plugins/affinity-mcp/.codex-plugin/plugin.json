@@ -1,0 +1,31 @@
+{
+  "name": "affinity-mcp",
+  "version": "0.1.0+codex.20260704134610",
+  "description": "Local Codex connector for Affinity by Canva's MCP server.",
+  "author": {
+    "name": "ChatGPT Codex, under debad's supervision"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Affinity MCP",
+    "shortDescription": "Control Affinity through its local MCP server.",
+    "longDescription": "Connects Codex to Affinity by Canva's local MCP server on localhost:6767. It forwards Affinity's script, SDK documentation, rendering, and script-library tools through a small local proxy. Created by ChatGPT Codex under debad's supervision.",
+    "developerName": "ChatGPT Codex, under debad's supervision",
+    "category": "Productivity",
+    "capabilities": [
+      "MCP",
+      "Local",
+      "Automation"
+    ],
+    "brandColor": "#9CFF65",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png",
+    "logoDark": "./assets/logo-dark.png",
+    "defaultPrompt": [
+      "List the scripts installed in Affinity.",
+      "Read the Affinity SDK preamble.",
+      "Help me write an Affinity script."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}
