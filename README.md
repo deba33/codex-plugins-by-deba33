@@ -41,6 +41,17 @@ Now on Market place screen/page switch to personal. You can see a new section **
 - Then go to `C:\Users\{YOUR_USERNAME}\.codex\.tmp\marketplaces`.
 ![](/doc_images/affinity-mcp/09.png)
 - Delete the `codex-plugins-by-deba33` folder.
+- Then open the `config.toml` file on `C:\Users\{YOUR_USERNAME}\.codex`. 
+![](/doc_images/affinity-mcp/10.png)
+and remove these lines
+```
+[marketplaces.codex-plugins-by-deba33]
+last_updated = "2026-07-05T04:13:15Z"
+last_revision = "3c91894f9ffaee755192eba2c3a78c8d39ac7964"
+source_type = "git"
+source = "https://github.com/deba33/codex-plugins-by-deba33.git"
+```
+![](/doc_images/affinity-mcp/11.png)
 
 ## Plugins
 
