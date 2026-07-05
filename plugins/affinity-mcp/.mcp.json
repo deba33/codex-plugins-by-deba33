@@ -2,6 +2,7 @@
   "mcpServers": {
     "affinity-by-canva": {
       "command": "node",
+      "cwd": "./",
       "args": [
         "./scripts/affinity-mcp-proxy.mjs"
       ],

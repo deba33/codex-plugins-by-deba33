@@ -1,6 +1,6 @@
 {
   "name": "affinity-mcp",
-  "version": "0.1.0+codex.20260704134610",
+  "version": "0.1.1",
   "description": "Local Codex connector for Affinity by Canva's MCP server.",
   "author": {
     "name": "ChatGPT Codex, under debad's supervision"
