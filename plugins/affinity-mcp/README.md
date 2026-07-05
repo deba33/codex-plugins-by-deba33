@@ -24,8 +24,9 @@ Because it can execute scripts, it can modify the currently open Affinity docume
 - Affinity by Canva with Model Context Protocol support.
 - Affinity open while using the connector.
 - Affinity MCP enabled in Affinity settings.
-- Node.js available as `node` on your system PATH.
-    - Install Node.js from [nodejs.org](https://nodejs.org/en/download)
+- Node.js for Windows installed in the default location.
+    - Install Node.js from [nodejs.org](https://nodejs.org/en/download) using the default installer options.
+    - The plugin currently launches Node from `C:\Program Files\nodejs\node.exe`.
 
 By default the connector expects Affinity's local MCP server at:
 
@@ -117,7 +118,7 @@ If Codex cannot find the Affinity tools:
 - Confirm Affinity is open.
 - Confirm Affinity MCP is enabled.
 - Confirm `http://localhost:6767/sse` is reachable while Affinity is open.
-- Confirm Node.js is installed and `node --version` works in a terminal.
+- Confirm Node.js is installed at `C:\Program Files\nodejs\node.exe`.
 - Restart Codex after installing or updating the plugin.
 - Start a new chat after enabling the plugin.
 

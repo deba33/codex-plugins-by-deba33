@@ -1,10 +1,10 @@
 {
   "mcpServers": {
     "affinity-by-canva": {
-      "command": "node",
-      "cwd": "./",
+      "command": "C:\\Program Files\\nodejs\\node.exe",
       "args": [
-        "./scripts/affinity-mcp-proxy.mjs"
+        "-e",
+        "const fs = require('node:fs'); const path = require('node:path'); const { pathToFileURL } = require('node:url'); const codexHome = process.env.CODEX_HOME || path.join(process.env.USERPROFILE, '.codex'); const root = path.join(codexHome, 'plugins', 'cache', 'codex-plugins-by-deba33', 'affinity-mcp'); const versions = fs.readdirSync(root, { withFileTypes: true }).filter((entry) => entry.isDirectory()).map((entry) => path.join(root, entry.name)).sort((a, b) => fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs); if (!versions.length) throw new Error('Affinity MCP plugin cache not found.'); const script = path.join(versions[0], 'scripts', 'affinity-mcp-proxy.mjs'); import(pathToFileURL(script).href);"
       ],
       "env": {
         "AFFINITY_MCP_BASE_URL": "http://localhost:6767",
