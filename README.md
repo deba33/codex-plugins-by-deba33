@@ -48,8 +48,8 @@ Now on Market place screen/page switch to personal. You can see a new section **
 and remove these lines
 ```
 [marketplaces.codex-plugins-by-deba33]
-last_updated = "2026-07-05T04:13:15Z"
-last_revision = "3c91894f9ffaee755192eba2c3a78c8d39ac7964"
+last_updated = "........"
+last_revision = "......."
 source_type = "git"
 source = "https://github.com/deba33/codex-plugins-by-deba33.git"
 ```
