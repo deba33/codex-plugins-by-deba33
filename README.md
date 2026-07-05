@@ -2,6 +2,8 @@
 
 ## Steps to Add this repo on Codex GUI as Plugins Marketplace
 
+*Only tested on Windows11*
+
 ### Step 1
 
 Open plugins

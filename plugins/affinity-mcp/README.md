@@ -6,6 +6,8 @@ It lets Codex discover Affinity's SDK docs, list and save Affinity scripts, rend
 
 This connector was completely created by ChatGPT Codex under [deba33](https://github.com/deba33)'s supervision. It is an independent community project and is not an official OpenAI, Canva, or Affinity release.
 
+*Only tested on Windows11*
+
 ## What It Can Do
 
 - List saved Affinity scripts.
