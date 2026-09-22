@@ -140,6 +140,10 @@ plugins/affinity-mcp/scripts/affinity-mcp-proxy.mjs
 
 Codex talks to that proxy over stdio. The proxy connects to Affinity's local MCP server at `localhost:6767`, initializes the Affinity MCP session, reads the SDK preamble, and forwards tool calls.
 
+The stdio transport uses newline-delimited JSON-RPC, as required by MCP. Older versions incorrectly used `Content-Length` headers, which prevented Codex from completing initialization.
+
+Run the transport regression test with `node --test plugins/affinity-mcp/scripts/affinity-mcp-proxy.test.mjs`. To also test the installed launcher against a running Affinity server, set `AFFINITY_MCP_LIVE_TEST=1` before running that command. The live test only discovers tools and reads the SDK preamble.
+
 ## Removing the plugin
 
 - On Market place screen/page switch to personal. 

@@ -322,29 +322,31 @@ let inputBuffer = Buffer.alloc(0);
 process.stdin.on("data", (chunk) => {
   inputBuffer = Buffer.concat([inputBuffer, chunk]);
   for (;;) {
-    const separator = inputBuffer.indexOf("\r\n\r\n");
+    const separator = inputBuffer.indexOf("\n");
     if (separator < 0) return;
-    const header = inputBuffer.slice(0, separator).toString("utf8");
-    const match = header.match(/content-length:\s*(\d+)/i);
-    if (!match) {
-      inputBuffer = inputBuffer.slice(separator + 4);
+    const rawMessage = inputBuffer.subarray(0, separator).toString("utf8").trim();
+    inputBuffer = inputBuffer.subarray(separator + 1);
+    if (!rawMessage) continue;
+    let message;
+    try {
+      message = JSON.parse(rawMessage);
+    } catch {
+      sendError(null, -32700, "Invalid JSON");
       continue;
     }
-    const length = Number(match[1]);
-    const start = separator + 4;
-    const end = start + length;
-    if (inputBuffer.length < end) return;
-    const rawMessage = inputBuffer.slice(start, end).toString("utf8");
-    inputBuffer = inputBuffer.slice(end);
-    handleMessage(JSON.parse(rawMessage)).catch((err) => {
-      try {
-        const parsed = JSON.parse(rawMessage);
-        if (parsed.id != null) sendError(parsed.id, -32603, err.message);
-      } catch {
-        // Ignore malformed input after best-effort error handling.
-      }
+    if (!message || typeof message !== "object" || Array.isArray(message)) {
+      sendError(null, -32600, "Invalid JSON-RPC request");
+      continue;
+    }
+    handleMessage(message).catch((err) => {
+      if (message.id != null) sendError(message.id, -32603, err.message);
     });
   }
+});
+
+process.stdin.on("end", async () => {
+  await affinity.close();
+  process.exit(0);
 });
 
 process.on("SIGINT", async () => {
@@ -421,7 +423,5 @@ function sendError(id, code, message) {
 }
 
 function send(message) {
-  const body = Buffer.from(JSON.stringify(message), "utf8");
-  process.stdout.write(`Content-Length: ${body.length}\r\n\r\n`);
-  process.stdout.write(body);
+  process.stdout.write(`${JSON.stringify(message)}\n`);
 }
