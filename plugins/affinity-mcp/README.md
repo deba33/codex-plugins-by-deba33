@@ -94,7 +94,8 @@ Or click on the icon to go to details page and install it there.
 4. Enable `Affinity MCP`.
 5. Enable only the permissions you are comfortable granting.
 ![](/doc_images/affinity-mcp/08.png)
-6. Keep Affinity open while using the plugin.
+6. In Same Settings Enable `Scripting`.
+7. Keep Affinity open while using the plugin.
 
 ### Useful Affinity permission toggles include:
 
@@ -118,7 +119,7 @@ This project was built against the Affinity MCP behavior observed on July 4, 202
 If Codex cannot find the Affinity tools:
 
 - Confirm Affinity is open.
-- Confirm Affinity MCP is enabled.
+- Confirm Affinity MCP + Scripting is enabled.
 - Confirm `http://localhost:6767/sse` is reachable while Affinity is open.
 - Confirm Node.js is installed at `C:\Program Files\nodejs\node.exe`.
 - Restart Codex after installing or updating the plugin.
